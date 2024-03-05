@@ -3,7 +3,7 @@
 This is a project to demonstrate the following fullstack skills.
 
 <details>
-    <summary>## Displayed Skills</summary>
+    ## <summary>Displayed Skills</summary>
     
     Frontend
     - NextJS
@@ -35,7 +35,7 @@ Definition of Done:
 - Backend queries the right data from the database
 
 <details>
-    <summary>## Step 1</summary>
+    ##  <summary>Step 1</summary>
     1. Find the factory address of a DAO service provider
         Search on the website, github or deploy a DAO and check etherscan for internal txs.
         [Aragon](https://github.com/aragon/osx/blob/82f16c3ebb662cee9ac420d32d493e36bb352f45/packages/contracts/Releases.md?plain=1#L5)
@@ -47,7 +47,7 @@ Definition of Done:
             -> two internal txs
             1) Multisig Factory instantiating a multisig deployed via Proxy-1967
             2) DAO Factory instantiating a governor contract deployed via Proxy-1967
-            
+
 
 
 
