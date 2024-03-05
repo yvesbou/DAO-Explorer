@@ -4,6 +4,7 @@ This is a project to demonstrate the following fullstack skills.
 
 <details>
     <summary>Displayed Skills</summary>
+    
     Frontend
     - NextJS
     - React
