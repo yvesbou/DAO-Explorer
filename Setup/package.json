@@ -1,0 +1,32 @@
+{
+  "name": "dao-explorer",
+  "version": "1.0.0",
+  "description": "Website to explore DAOs, their origin, relationships, actions and balances",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc ./Setup/searchEIP1967Implementation.ts"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yvesbou/DAO-Explorer.git"
+  },
+  "keywords": [
+    "dao",
+    "blockchain",
+    "analytics"
+  ],
+  "author": "Yves Boutellier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yvesbou/DAO-Explorer/issues"
+  },
+  "homepage": "https://github.com/yvesbou/DAO-Explorer#readme",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "ethers": "^6.11.1"
+  }
+}
