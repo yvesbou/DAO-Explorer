@@ -36,23 +36,7 @@ Definition of Done:
 
 <details>
     <summary>Step 1</summary>
-    1. Find the factory address of a DAO service provider
-    Search on the website, github or deploy a DAO and check etherscan for internal txs.
-    [Aragon](https://github.com/aragon/osx/blob/82f16c3ebb662cee9ac420d32d493e36bb352f45/packages/contracts/Releases.md?plain=1#L5)
-
-        For example:
-        
-        DAO Factory: [0xf96e6FD76BD0A15580604e1Ea5818D448b1041C0](https://etherscan.io/address/0xf96e6FD76BD0A15580604e1Ea5818D448b1041C0)
-        
-        Click on one DAO deployment (ie. a transaction), method: "Create Dao":
-        
-        Example: [0xa5949f582fbc3a914f9fb4e62698523725febe054c6d8eb45e90dbb4b17cb448](https://etherscan.io/tx/0xa5949f582fbc3a914f9fb4e62698523725febe054c6d8eb45e90dbb4b17cb448)
-        
-        -> two internal transactions
-        1) Multisig Factory instantiating a multisig deployed via Proxy-1967
-        2) DAO Factory instantiating a governor contract deployed via Proxy-1967
-
-        To read from the storage of the [EIP-1967](https://eips.ethereum.org/EIPS/eip-1967) implementation go to etherscan, and if it fails, use my etherjs script.
+    
 
 
 

@@ -1,4 +1,4 @@
-.env
+Setup/.env
 .venv
 .vscode
 package-lock.json
