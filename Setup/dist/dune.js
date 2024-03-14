@@ -1,7 +1,8 @@
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { config } from 'dotenv';
-import { DuneClient } from "./duneClient";
+import fs from 'fs';
+import { DuneClient } from "./duneClient.js";
 // Obtain the file path of the current module
 const __filename = fileURLToPath(import.meta.url);
 // Obtain the directory path of the current module
@@ -11,8 +12,19 @@ config({ path: `${__dirname}/../.env` });
 const main = async () => {
     const apiKey = process.env.DUNE_API_KEY;
     const duneClient = new DuneClient(apiKey);
-    const queryId = "3519705";
-    duneClient.getDataFromQuery(queryId);
+    // const queryId = "3519705";
+    // duneClient.getDataFromQuery(queryId);
+    // do pagination and store the result in files (rewrite getDataFromQuery)
+    const r = await duneClient.getExecutionResult('01HRYFFK1VCQFY6YB9ERC6G57C', "10000", "0");
+    console.log(r.result.rows[0]);
+    const dataDirectory = '../Data';
+    if (!fs.existsSync(dataDirectory)) {
+        fs.mkdirSync(dataDirectory);
+    }
+    const filename = `${dataDirectory}/execution_result_${new Date().toISOString()}.json`;
+    console.log(filename);
+    fs.writeFileSync(filename, JSON.stringify(r.result.rows, null, 2));
+    // console.log(r)
 };
 main();
 //# sourceMappingURL=dune.js.map
